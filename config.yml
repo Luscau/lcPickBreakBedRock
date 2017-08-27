@@ -1,0 +1,19 @@
+Configuration:
+  BED_ROCK_INVENTORY: false
+  LAYER: 10
+  VELOCITY_BREAK_PICK: veryfast
+  MESSAGE_ON_BREAK: true
+  MESSAGE: '&cYou pickaxe SILK_TOUCH II break :('
+  
+Pickaxe:
+  NAME: '&bDiamond Pickaxe'
+  LORE:
+  - ''
+  - '&eWith this item is possible break BedRock.'
+  
+Messages:
+  USAGE: '&cUsage: /pick <player>'
+  PLAYER_NOT_FOUND: '&cPlayer not found...'
+  SUCCESS_GIVE: '&bYou added a pickaxe in inventory from &7{player}'
+  PLAYER_RECEIVED_PICKAXE: '&bYou received Pickaxe SILK_TOUCH II.'
+  CONFIG_RELOADED: '&cConfig.yml successfully reloaded.'

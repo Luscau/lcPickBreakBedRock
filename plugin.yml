@@ -1,0 +1,8 @@
+main: eu.luscau.PickBreakBedRock
+name: lcPickBreakBedRock
+version: 1.0
+author: Luscau
+
+commands:
+  pick:
+    description: Pickaxe SILK_TOUCH II
