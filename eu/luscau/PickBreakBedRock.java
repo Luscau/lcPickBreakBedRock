@@ -14,9 +14,20 @@ public class PickBreakBedRock extends JavaPlugin implements Listener {
 	private ConsoleCommandSender c = getServer().getConsoleSender();
 	private PluginManager pm = getServer().getPluginManager();
 
+
 	@Override
 	public void onEnable() {
-		checkFactions();
+		
+		if (this.pm.getPlugin("Factions") == null || this.pm.getPlugin("MassiveCore") == null) {
+			this.pm.disablePlugin(PickBreakBedRock.getPlugin());
+			this.c.sendMessage("§blcPickBreakBedRock §cFactions ou MassiveCore não encontrado, plugin desabilitado...");
+			this.c.sendMessage("§blcPickBreakBedRock §cFactions ou MassiveCore não encontrado, plugin desabilitado...");
+			this.c.sendMessage("§blcPickBreakBedRock §cFactions ou MassiveCore não encontrado, plugin desabilitado...");
+			this.c.sendMessage("§blcPickBreakBedRock §cFactions ou MassiveCore não encontrado, plugin desabilitado...");
+			this.c.sendMessage("§blcPickBreakBedRock §cFactions ou MassiveCore não encontrado, plugin desabilitado...");
+			return;
+		}
+		
 		sendMessages();
 		createConfig();
 		registerCommandsAndEvents();
@@ -33,14 +44,6 @@ public class PickBreakBedRock extends JavaPlugin implements Listener {
 	void createConfig() {
 		saveDefaultConfig();
 		saveConfig();
-	}
-
-	void checkFactions() {
-		if (this.pm.getPlugin("Factions") == null || this.pm.getPlugin("MassiveCore") == null) {
-			this.pm.disablePlugin(PickBreakBedRock.getPlugin());
-			this.c.sendMessage("Factions ou MassiveCore não encontrado, plugin desabilitado...");
-			return;
-		}
 	}
 
 	void registerCommandsAndEvents() {
